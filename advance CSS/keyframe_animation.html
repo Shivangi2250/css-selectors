@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframe animation</title>
+  <style>
+    body{
+      background:#333;
+    }
+
+    .box{
+      background-color: aliceblue;
+      width:200px;
+      height:200px;
+      /* animation for 2s */
+      /* animation-name: animation1; */
+      /* animation-duration: 5s; */
+      /* means total no. of time iteration happens, for infinite time write "infinite" instead of 2 */
+      /* animation-iteration-count: 2; */
+      /* if we dont want to return it in its own position the do the below */
+      /* animation-fill-mode:forwards; */
+      /* delay the start of the animation */
+      /* animation-delay: 2s; */
+      /* do the reverse animation "alternate-reverse" | default is "alternate" */
+      /* animation-direction: alternate; */
+      /* notebook mai hai ## */
+      /* animation-timing-function: ease-out; */
+      /* now moving from top to below by making its position relative */
+      position:relative;
+
+      /* lets do all the above in just one line */
+      animation:animation1 5s 2 forwards ease-out;
+
+
+    }
+    @keyframes animation1{
+      /* staring point */
+      from{
+        width:200px;
+        top:0;
+      }
+      /* ending point */
+      to{
+        width:600px;
+        background-color: purple;
+        top:300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

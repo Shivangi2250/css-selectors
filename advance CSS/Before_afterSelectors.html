@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before/After selectors</title>
+  <style>
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #333;
+      color:aliceblue;
+      margin:0;
+    }
+
+    header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+    }
+
+    header> h1{
+      margin:20px;
+    }
+
+    header::before{
+      content:'';
+      background: url('https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80') no-repeat center center/cover;
+      opacity:0.4;
+      position: absolute;
+      left: 0;
+      top:0;
+      height:100%;
+      width:100%;
+      /* bring the text forward from the content */
+      z-index: -1;
+    }
+
+    /* body{
+      content:'';
+      background: url('https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80') no-repeat center center/cover;
+    } */
+    /* before after selectors allows us to put something before and after */
+    /* ASTERISK '*' */
+    .is_required:after{
+      content: '*';
+      color:red;
+      padding-left:4px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- <label for="name" class="is_required">Name</label>
+  <input type="text"> -->
+  <header>
+    <h1>Hello World</h1> 
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, impedit.</p>
+  </header>
+  <section>
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum suscipit reprehenderit tempore sit deserunt aliquam quisquam saepe tenetur doloremque a.</p>
+  </section>
+  
+</body>
+</html>

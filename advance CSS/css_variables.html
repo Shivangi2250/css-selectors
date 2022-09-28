@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Css variables</title>
+  <style>
+
+    /* deFINE VARIABLE */
+    /* any variable that you've created in the root scope can be used anywhere in the css */
+    :root{
+      --max-width:1100px;
+      --primary-color:steelblue;
+      --secondary-color:skyblue;
+      --light-color:#f4f4f4;
+    }
+    *{
+      margin:0;
+      padding:0;
+    }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.4;
+      /* CALLING VARIABLE */
+      background: var(--light-color);
+    }
+    header{
+      background: var(--primary-color);
+      border-bottom: 5px var(--secondary-color) solid;
+      color:#fff;
+      text-align:center
+    }
+
+    .container{
+      display:flex;
+      margin:auto;
+      max-width:var(--max-width);
+    }
+    .box{
+      background-color: var(--primary-color);
+      border-bottom: 5px var(--secondary-color) solid;
+      color:#f4f4f4;
+      padding:1rem;
+      margin:1rem;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>I am shivangi</h1>
+  </header>
+  <div class="container">
+    <div class="box" class="box-1">
+      <h3>heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum omnis excepturi autem est eos eaque odit perferendis facere harum officiis.</p>
+    </div>
+    <div class="box" class="box-2">
+      <h3>heading2</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eligendi natus error quod adipisci cum et, dolores numquam ea similique?</p>
+    </div>
+  </div>
+</body>
+</html>

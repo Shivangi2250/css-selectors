@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Shadow Property</title>
+  <style>
+    .container{
+      display:flex;
+    }
+    .box{
+      padding:1rem;
+      margin:1rem;
+      background:coral;
+      color:#fff;
+      /* SHADOW ON RIGHT AND BOTTOM */
+      /* offset-x offset-y color */
+      /* box-shadow: 10px 10px teal; */
+
+      /* offest-x offset-y blur-radius */
+      /* box-shadow: 10px 10px 20px teal ; */
+
+      /* offest-x offset-y blur-radius */
+      /* box-shadow: 10px 10px 20px teal ; */
+
+      /* SHADOW ON LEFT AND TOP */
+      /*apply negative values of offsets */
+      /* box-shadow: -5px -5px 20px teal ;  */
+
+      /* offest-x offset-y blur-radius spread-radius color */
+      /* box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.4) ; */
+
+      /* BOX_SHADOW INSIDE THE BOX(top-left-inset mai negative vakues for right and bottom and positive values for top left offsets) */
+      /* inset offest-x offset-y blur-radius spread-radius color */
+      /* box-shadow: inset 3px 3px 10px 1px rgba(0,0,0,0.4) ; */
+
+      /* MULTIPLE SHADOW */
+      box-shadow: 3px 3px 10px teal, -3px -3px 10px olive;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h3>heading</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, aut.</p>
+    </div>
+    <div class="box">
+      <h3>heading</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, aut.</p>
+    </div>
+    <div class="box">
+      <h3>heading</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, aut.</p>
+    </div>
+  </div>
+</body>
+</html>
